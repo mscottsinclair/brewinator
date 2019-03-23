@@ -1,2 +1,0 @@
-# brewinator
-Brewery Controller
