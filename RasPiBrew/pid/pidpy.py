@@ -46,7 +46,7 @@ class pidpy(object):
         #--------------------------------------
         # Calculate Lowpass Filter for D-term
         #--------------------------------------
-        lpf = self.lpf1 * pidpy.lpf_1 + self.lpf2 * (ek + pidpy.ek_1);
+        lpf = self.lpf1 * pidpy.lpf_1 + self.lpf2 * (ek + pidpy.ek_1)
         
         if (enable):
             #-----------------------------------------------------------
