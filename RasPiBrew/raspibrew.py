@@ -21,7 +21,7 @@
 
 
 from multiprocessing import Process, Pipe, Queue, current_process
-from Queue import Full
+from queue import Full
 from subprocess import Popen, PIPE, call
 from datetime import datetime
 import time, random, serial, os
