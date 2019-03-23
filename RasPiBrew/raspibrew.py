@@ -481,11 +481,11 @@ if __name__ == '__main__':
 
     gpioInverted = xml_root.find('GPIO_Inverted').text.strip()
     if gpioInverted == "0":
-	ON = 1
-	OFF = 0
+        ON = 1
+	    OFF = 0
     else:
-	ON = 0
-	OFF = 1
+        ON = 0
+        OFF = 1
 
 
     pinHeatList=[]
