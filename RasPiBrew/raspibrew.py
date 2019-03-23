@@ -477,7 +477,7 @@ if __name__ == '__main__':
     if gpioNumberingScheme == "BOARD":
         GPIO.setmode(GPIO.BOARD)
     else:
-	GPIO.setmode(GPIO.BCM)
+        GPIO.setmode(GPIO.BCM)
 
     gpioInverted = xml_root.find('GPIO_Inverted').text.strip()
     if gpioInverted == "0":
