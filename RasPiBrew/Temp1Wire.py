@@ -26,6 +26,8 @@ class Temp1Wire:
         print(result)
         print("Result split is: ")
         print(result.split('\n')[0].split(' ')[11])
+        print("Temp in Celcius:")
+        print(float(result.split("=")[-1])/1000)
         
         #if (result.split('\n')[0].split(' ')[11] == "YES"):
         #  temp_C = float(result.split("=")[-1])/1000 # temp in Celcius
