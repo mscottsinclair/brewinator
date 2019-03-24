@@ -22,17 +22,16 @@ class Temp1Wire:
 
         result = pipe.communicate()[0].decode('utf-8').strip()
         
-        print("Result is: ")
-        print(result)
-        print("Result split is: ")
-        print(result.split('\n')[0].split(' ')[11])
-        print("Temp in Celcius:")
-        print(float(result.split("=")[-1])/1000)
+        # print("Result is: ")
+        # print(result)
+        # print("Result split is: ")
+        # print(result.split('\n')[0].split(' ')[11])
+        # print("Temp in Celcius:")
+        # print(float(result.split("=")[-1])/1000)
         
-        #if (result.split('\n')[0].split(' ')[11] == "YES"):
-        #  temp_C = float(result.split("=")[-1])/1000 # temp in Celcius
-        #else:
-        
-        temp_C = -99 #bad temp reading
+        if (result.split('\n')[0].split(' ')[11] == "YES"):
+          temp_C = float(result.split("=")[-1])/1000 # temp in Celcius
+        else:
+          temp_C = -99 #bad temp reading
           
         return temp_C
