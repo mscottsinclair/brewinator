@@ -22,7 +22,9 @@ class Temp1Wire:
 
         result = pipe.communicate()[0].decode('utf-8').strip()
         
+        print("Result is: ")
         print(result)
+        print("Result split is: ")
         print(result.split('\n')[0].split(' ')[11])
         
         #if (result.split('\n')[0].split(' ')[11] == "YES"):
