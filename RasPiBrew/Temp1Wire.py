@@ -23,6 +23,7 @@ class Temp1Wire:
         result = pipe.communicate()[0].decode('utf-8').strip()
         
         print(result)
+        print(result.split('\n')[0].split(' ')[11])
         
         #if (result.split('\n')[0].split(' ')[11] == "YES"):
         #  temp_C = float(result.split("=")[-1])/1000 # temp in Celcius
