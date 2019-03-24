@@ -438,9 +438,9 @@ def tempControlProc(myTempSensor, display, pinNum, readOnly, paramStatus, status
         
 
 def logdata(tank, temp, heat):
-    f = open("brewery" + str(tank) + ".csv", "ab")
+    f = open("brewery" + str(tank) + ".csv", "a+")
     #f.write("%3.1f;%3.3f;%3.3f\n" % (getbrewtime(), temp, heat))
-    f.write("stuff, things, junk").encode(encoding='UTF-8')
+    f.write("stuff, things, junk")
     f.close()
 
 
