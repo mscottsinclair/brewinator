@@ -18,7 +18,7 @@ class Temp1Wire:
 
     def readTempC(self):
         #pipe = Popen(["cat","/sys/bus/w1/devices/" + tempSensorId + "/w1_slave"], stdout=PIPE)
-        pipe = Popen(["cat", self.oneWireDir + self.tempSensorId + "/w1_slave"],  universal_newlines=True, stdout=PIPE)
+        pipe = Popen(["cat", self.oneWireDir + self.tempSensorId + "/w1_slave"],  universal_newlines=False, stdout=PIPE)
 
         result = pipe.communicate()[0]
         if (result.split('\n')[0].split(' ')[11] == "YES"):
