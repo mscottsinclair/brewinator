@@ -7,7 +7,7 @@
 	
 	<!-- Place templates (themes) in templates folder -->
 	<!-- The static folder must contain the corresponding css and js files -->
-	<Template>brewinator.html</Template>
+	<Template>raspibrew.html</Template>
 	
 	<!-- Use LCD - yes or no-->
 	<Use_LCD>no</Use_LCD>
