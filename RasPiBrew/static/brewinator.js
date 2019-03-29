@@ -485,24 +485,24 @@ jQuery(document).ready(function() {
 	});
 
 	//draw gauge
-	//var options_gauge = {
-	//	majorTickLabel : true,
-	//	value : 60,
-	//	label : 'Temp',
-	//	unitsLabel : '' + String.fromCharCode(186),
-	//	min : 60,
-	//	max : 220,
-	//	majorTicks : 9,
-	//	minorTicks : 9, // small ticks inside each major tick
-	//	greenFrom : 60,
-	//	greenTo : 95,
-	//	yellowFrom : 95,
-	//	yellowTo : 150,
-	//	redFrom : 150,
-	//	redTo : 200
-	//};
+	var options_gauge = {
+		majorTickLabel : true,
+		value : 60,
+		label : 'Temp',
+		unitsLabel : '' + String.fromCharCode(186),
+		min : 60,
+		max : 220,
+		majorTicks : 9,
+		minorTicks : 9, // small ticks inside each major tick
+		greenFrom : 60,
+		greenTo : 95,
+		yellowFrom : 95,
+		yellowTo : 150,
+		redFrom : 150,
+		redTo : 200
+	};
 
-	//gaugeDisplay = new Gauge(document.getElementById('tempGauge'), options_gauge);
+	gaugeDisplay = new Gauge(document.getElementById('tempGauge'), options_gauge);
 
 	// line plot Settings
 	i = 0;
