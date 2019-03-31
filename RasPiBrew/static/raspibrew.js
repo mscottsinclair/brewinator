@@ -293,6 +293,46 @@ jQuery(document).ready(function() {
 
 	gaugeDisplay1 = new Gauge(document.getElementById('tempGauge1'), options_gauge1);
 
+	//draw gauge 2
+	var options_gauge2 = {
+		majorTickLabel : true,
+		value : 60,
+		label : 'Temp',
+		unitsLabel : '' + String.fromCharCode(186),
+		min : 60,
+		max : 220,
+		majorTicks : 9,
+		minorTicks : 9, // small ticks inside each major tick
+		greenFrom : 60,
+		greenTo : 95,
+		yellowFrom : 95,
+		yellowTo : 150,
+		redFrom : 150,
+		redTo : 200
+	};
+	
+	gaugeDisplay2 = new Gauge(document.getElementById('tempGauge2'), options_gauge2);
+
+	//draw gauge 3
+	var options_gauge3 = {
+		majorTickLabel : true,
+		value : 60,
+		label : 'Temp',
+		unitsLabel : '' + String.fromCharCode(186),
+		min : 60,
+		max : 220,
+		majorTicks : 9,
+		minorTicks : 9, // small ticks inside each major tick
+		greenFrom : 60,
+		greenTo : 95,
+		yellowFrom : 95,
+		yellowTo : 150,
+		redFrom : 150,
+		redTo : 200
+	};
+
+	gaugeDisplay3 = new Gauge(document.getElementById('tempGauge3'), options_gauge3);
+
 	// line plot Settings
 	i = 0;
 	tempdataarray = [];
