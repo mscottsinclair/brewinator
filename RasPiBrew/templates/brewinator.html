@@ -44,9 +44,9 @@
 						<thead>
 							<tr>
 								<th class="col-xs-4">Vessel:</th>
-								<th class="col-xs-4" align="center">Boil Kettle</th>
-								<th class="col-xs-4" align="center">Mash Tun</th>
-								<th class="col-xs-4" align="center">Hot Liquor Tank</th>
+								<th class="col-xs-4 text-center">Boil Kettle (black)</th>
+								<th class="col-xs-4 text-center">Mash Tun (blue)</th>
+								<th class="col-xs-4 text-center">Hot Liquor Tank (red)</th>
 
 							</tr>
 						</thead>
@@ -54,7 +54,7 @@
 						<tbody>
 						
 							<tr id="firstRow" data-toggle="collapse" data-target="#extra_data_info1" class="accordion-toggle">
-								<td class="col-xs-4">Temperature:</td>
+								<td class="col-xs-4"><strong>Temperature:</strong></td>
 								<td align="center">
 									<h5><span id="tempResponse">60</span><span id="tempResponseUnits">&degF</span></h5>
 									<canvas id="tempGauge1" width="200" height="200"></canvas>
@@ -89,7 +89,7 @@
 								</div></td>
 							</tr>
 							<tr id="secondRow" data-toggle="collapse" data-target="#extra_data_info2" class="accordion-toggle">
-								<td class="col-xs-4">Heat Output</td>
+								<td class="col-xs-4"><strong>Heat Output</strong></td>
 								<td align="center"><h5><span id="dutycycleResponse">0</span><span id="dutyCycleUnits"> </span></h5></td>
 								<td align="center"><h5><span id="dutycycleResponse2"></span><span id="dutyCycleUnits2"> </span></h5></td>
 								<td align="center"><h5><span id="dutycycleResponse3"></span><span id="dutyCycleUnits3"> </span></h5></td>
@@ -266,7 +266,9 @@
 							</div>
 					</fieldset>
 				</div>
-				<div class="row">
+
+				<!-- not using GPIO for pumps-->
+				<!-- <div class="row">
 					<fieldset class="border">
 
 						<legend class="border">
@@ -284,7 +286,7 @@
 							<span>&nbsp&nbspPUMP/STIR2:&nbsp&nbsp<span>Off</span> <span>On</span> </span> <a id="GPIO_Color2" class="btn btn-danger"></a> </label>
 
 					</fieldset>
-				</div>
+				</div> -->
 
 			</div>
 		</div>
