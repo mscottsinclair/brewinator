@@ -55,9 +55,18 @@
 						
 							<tr id="firstRow" data-toggle="collapse" data-target="#extra_data_info1" class="selectRow row-highlight accordion-toggle">
 								<td class="col-xs-4">Temperature:</td>
-								<td align="center"><h5><span id="tempResponse">60</span><span id="tempResponseUnits">&degF</span></h5></td>
-								<td align="center"><h5><span id="tempResponse2"></span><span id="tempResponseUnits2"> </span></h5></td>
-								<td align="center"><h5><span id="tempResponse3"></span><span id="tempResponseUnits3"> </span></h5></td>
+								<td align="center">
+									<h5><span id="tempResponse">60</span><span id="tempResponseUnits">&degF</span></h5>
+									<canvas id="tempGauge1" width="200" height="200"></canvas>
+								</td>
+								<td align="center">
+									<h5><span id="tempResponse2">60</span><span id="tempResponseUnits2">&degF</span></h5>
+									<canvas id="tempGauge2" width="200" height="200"></canvas>
+								</td>
+								<td align="center">
+									<h5><span id="tempResponse3">60</span><span id="tempResponseUnits3">&degF</span></h5>
+									<canvas id="tempGauge3" width="200" height="200"></canvas>
+								</td>
 							</tr>
 						
 							<tr>
@@ -231,8 +240,6 @@
 						</legend>
 						<div class="row">
 							<div class="ControlResponse" id="tempheatplots">
-								<canvas id="tempGauge" width="200" height="200">
-								</canvas>
 								<div class="tempdata">
 									<p class="plottitle">
 										Temperature Plot
