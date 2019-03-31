@@ -20,7 +20,8 @@
 // IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //declare globals
-var t, tempdataarray, heatdataarray, setpointdataarray, dutyCycle, options_temp, options_heat, plot, gaugeDisplay, newGaugeDisplay;
+var t, tempdataarray, heatdataarray, setpointdataarray, dutyCycle, options_temp, options_heat, plot;
+var gaugeDisplay1, gaugeDisplay2, gaugeDisplay3, newGaugeDisplay;
 var capture_on = 1;
 var tempUnits, temp, setpoint;
 t = 0;
@@ -151,7 +152,9 @@ function waitForMsg() {
 			jQuery('#i_paramResponse').html(data.i_param);
 			jQuery('#d_paramResponse').html(data.d_param);
 
-			gaugeDisplay.setValue(parseFloat(data.temp));
+			gaugeDisplay1.setValue(parseFloat(data.temp));
+			gaugeDisplay2.setValue(parseFloat(data.temp));
+			gaugeDisplay3.setValue(parseFloat(data.temp));
 
 			if (data.mode == "auto") {
 				//setpoint_C = (5.0/9.0)*(parseFloat(data.set_point) - 32);
@@ -270,8 +273,8 @@ jQuery(document).ready(function() {
 		return false;
 	});
 
-	//draw gauge
-	var options_gauge = {
+	//draw gauge 1
+	var options_gauge1 = {
 		majorTickLabel : true,
 		value : 60,
 		label : 'Temp',
@@ -288,7 +291,7 @@ jQuery(document).ready(function() {
 		redTo : 200
 	};
 
-	gaugeDisplay = new Gauge(document.getElementById('tempGauge'), options_gauge);
+	gaugeDisplay1 = new Gauge(document.getElementById('tempGauge1'), options_gauge1);
 
 	// line plot Settings
 	i = 0;
