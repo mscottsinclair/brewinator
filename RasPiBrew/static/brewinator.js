@@ -377,7 +377,7 @@ function waitForMsg() {
 				jQuery('#i_paramResponse3').html(data.i_param);
 				jQuery('#d_paramResponse3').html(data.d_param);
 
-				gaugeDisplay2.setValue(parseFloat(data.temp));
+				gaugeDisplay3.setValue(parseFloat(data.temp));
 				
 				storeData(2, data);
 
