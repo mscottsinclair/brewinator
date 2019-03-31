@@ -519,11 +519,11 @@ jQuery(document).ready(function() {
 		max : 220,
 		majorTicks : 9,
 		minorTicks : 9, // small ticks inside each major tick
-		greenFrom : 60,
-		greenTo : 95,
-		yellowFrom : 95,
-		yellowTo : 150,
-		redFrom : 150,
+		greenFrom : 146,
+		greenTo : 156,
+		yellowFrom : 156,
+		yellowTo : 168,
+		redFrom : 168,
 		redTo : 200
 	};
 
