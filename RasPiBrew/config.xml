@@ -26,10 +26,10 @@
 	<Heat_Pin>16</Heat_Pin>
 	
 	<!-- Mash Tun Probe -->
-	<!--Temp_Sensor_Id>28-000008e13321</Temp_Sensor_Id-->
+	<Temp_Sensor_Id>28-000008e13321</Temp_Sensor_Id>
 	
 	<!-- Boil Kettle Probe -->
-	<!--Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id-->
+	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
 
 	<!-- If your relay board work inverted mode set to 1 -->
 	<GPIO_Inverted>0</GPIO_Inverted>
