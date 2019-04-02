@@ -476,7 +476,7 @@ jQuery(document).ready(function() {
 				success : function(data) {
 				},
 			});
-		//}
+		}
 
 		//reset plot
 		if (jQuery('#off').is(':checked') == false) {
