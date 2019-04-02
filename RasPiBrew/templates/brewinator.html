@@ -40,36 +40,24 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<table id="dataTable" class="table table-bordered table-condensed table-responsive style="border-collapse:collapse;"">
-
 						<thead>
 							<tr>
-								<th class="col-xs-3">Vessel:</th>
-								<th class="col-xs-3 text-center">Boil Kettle (black)</th>
-								<th class="col-xs-3 text-center">Mash Tun (blue)</th>
-								<th class="col-xs-3 text-center">Hot Liquor Tank (red)</th>
+								<th class="col-xs-4">Vessel</th>
+								<th class="col-xs-4">Temp</th>
+								<th class="col-xs-4">Heat Output</th>
 
 							</tr>
 						</thead>
-						
 						<tbody>
-						
-							<tr id="firstRow" data-toggle="collapse" data-target="#extra_data_info1" class="accordion-toggle">
-								<td class="col-xs-3"><strong>Temperature:</strong></td>
+							<tr id="firstRow" data-toggle="collapse" data-target="#extra_data_info1" class="selectRow row-highlight accordion-toggle">
+								<td align="center"><h5>vessel1</h5></td>
 								<td align="center">
 									<h5><span id="tempResponse">60</span><span id="tempResponseUnits">&degF</span></h5>
-									<canvas id="tempGauge1" width="200" height="200"></canvas>
+									<br><canvas id="tempGauge1" width="200" height="200"></canvas>
 								</td>
-								<td align="center">
-									<h5><span id="tempResponse2">60</span><span id="tempResponseUnits2">&degF</span></h5>
-									<canvas id="tempGauge2" width="200" height="200"></canvas>
-								</td>
-								<td align="center">
-									<h5><span id="tempResponse3">60</span><span id="tempResponseUnits3">&degF</span></h5>
-									<canvas id="tempGauge3" width="200" height="200"></canvas>
-								</td>
+								<td align="center"><h5><span id="dutycycleResponse">0</span><span id="dutyCycleUnits"> </span></h5></td>
 							</tr>
-						
-							<!-- <tr>
+							<tr>
 								<td colspan="3" class="hiddenRow" id="vessel1">
 								<div class="accordian-body collapse" id="extra_data_info1">
 
@@ -87,14 +75,16 @@
 									<div class="voffset15"></div>
 
 								</div></td>
-							</tr> -->
-							<tr id="secondRow" data-toggle="collapse" data-target="#extra_data_info2" class="accordion-toggle">
-								<td class="col-xs-3"><strong>Heat Output</strong></td>
-								<td align="center"><h5><span id="dutycycleResponse">0</span><span id="dutyCycleUnits"> </span></h5></td>
-								<td align="center"><h5><span id="dutycycleResponse2"></span><span id="dutyCycleUnits2"> </span></h5></td>
-								<td align="center"><h5><span id="dutycycleResponse3"></span><span id="dutyCycleUnits3"> </span></h5></td>
 							</tr>
-							<!-- <tr>
+							<tr id="secondRow" data-toggle="collapse" data-target="#extra_data_info2" class="selectRow accordion-toggle">
+								<td align="center"><h5>vessel2</h5></td>
+								<td align="center">
+									<h5><span id="tempResponse2"></span><span id="tempResponseUnits2"> </span></h5>
+									<br><canvas id="tempGauge2" width="200" height="200"></canvas>
+								</td>
+								<td align="center"><h5><span id="dutycycleResponse2"></span><span id="dutyCycleUnits2"> </span></h5></td>
+							</tr>
+							<tr>
 								<td colspan="3" class="hiddenRow" id="vessel2">
 								<div class="accordian-body collapse" id="extra_data_info2">
 
@@ -113,6 +103,14 @@
 									<div class="voffset15"></div>
 
 								</div></td>
+							</tr>
+							<tr id="thirdRow" data-toggle="collapse" data-target="#extra_data_info3" class="selectRow accordion-toggle">
+								<td align="center"><h5>vessel3</h5></td>
+								<td align="center">
+									<h5><span id="tempResponse3"></span><span id="tempResponseUnits3"> </span></h5>
+									<br><canvas id="tempGauge3" width="200" height="200"></canvas>
+								</td>
+								<td align="center"><h5><span id="dutycycleResponse3"></span><span id="dutyCycleUnits3"> </span></h5></td>
 							</tr>
 							<tr>
 								<td colspan="3" class="hiddenRow" id="vessel3">
@@ -133,7 +131,7 @@
 									<div class="voffset15"></div>
 
 								</div></td>
-							</tr> -->
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -287,6 +285,7 @@
 							<span>&nbsp&nbspPUMP/STIR2:&nbsp&nbsp<span>Off</span> <span>On</span> </span> <a id="GPIO_Color2" class="btn btn-danger"></a> </label>
 
 					</fieldset>
+
 				</div> -->
 
 			</div>
