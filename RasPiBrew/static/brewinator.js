@@ -20,7 +20,7 @@
 // IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //declare globals
-var timeElapsed, tempDataArray, heatDataArray, setpointDataArray, dutyCycle, options_temp, options_heat, plot
+var timeElapsed, tempDataArray, heatDataArray, setpointDataArray, dutyCycle, options_temp, options_heat, plot;
 var gaugeDisplay1, gaugeDisplay2, gaugeDisplay3, newGaugeDisplay;
 var capture_on = 1;
 var numTempSensors, tempUnits, temp, setpoint;
