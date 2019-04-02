@@ -293,9 +293,9 @@ function waitForMsg() {
 			storeData(0, data);
 
 			if (capture_on == 1) {
-				if ($('#firstRow').hasClass('row-highlight') == true) {
+				//if ($('#firstRow').hasClass('row-highlight') == true) {
 					plotData(0, data);
-				}
+				//}
 				setTimeout('waitForMsg()', 1);
 				//in millisec
 			}
@@ -338,9 +338,9 @@ function waitForMsg() {
 				storeData(1, data);
 
 				if (capture_on == 1) {
-					if ($('#secondRow').hasClass('row-highlight') == true) {
+					//if ($('#secondRow').hasClass('row-highlight') == true) {
 						plotData(1, data);
-					}
+					//}
 				}
 			}
 		});
@@ -382,9 +382,9 @@ function waitForMsg() {
 				storeData(2, data);
 
 				if (capture_on == 1) {
-					if ($('#thirdRow').hasClass('row-highlight') == true) {
+					//if ($('#thirdRow').hasClass('row-highlight') == true) {
 						plotData(2, data);
-					}
+					//}
 				}
 			}
 		});
@@ -467,7 +467,7 @@ jQuery(document).ready(function() {
 				},
 			});
 		}
-		if (($('#thirdRow').hasClass('row-highlight') == true) && (numTempSensors >= 3)) {
+		//if (($('#thirdRow').hasClass('row-highlight') == true) && (numTempSensors >= 3)) {
 
 			jQuery.ajax({
 				type : "POST",
@@ -476,7 +476,7 @@ jQuery(document).ready(function() {
 				success : function(data) {
 				},
 			});
-		}
+		//}
 
 		//reset plot
 		if (jQuery('#off').is(':checked') == false) {
