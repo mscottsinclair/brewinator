@@ -20,7 +20,7 @@
 // IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //declare globals
-var timeElapsed, tempDataArray, heatDataArray, setpointDataArray, dutyCycle, options_temp, options_heat, plot, gaugeDisplay, newGaugeDisplay;
+var timeElapsed, tempDataArray, heatDataArray, setpointDataArray, dutyCycle, options_temp, options_heat, plot, gaugeDisplay1, newGaugeDisplay;
 var capture_on = 1;
 var numTempSensors, tempUnits, temp, setpoint;
 
@@ -287,7 +287,7 @@ function waitForMsg() {
 			jQuery('#i_paramResponse').html(data.i_param);
 			jQuery('#d_paramResponse').html(data.d_param);
 
-			//gaugeDisplay.setValue(parseFloat(data.temp));
+			gaugeDisplay1.setValue(parseFloat(data.temp));
 
 			storeData(0, data);
 
@@ -485,24 +485,24 @@ jQuery(document).ready(function() {
 	});
 
 	//draw gauge
-	//var options_gauge = {
-	//	majorTickLabel : true,
-	//	value : 60,
-	//	label : 'Temp',
-	//	unitsLabel : '' + String.fromCharCode(186),
-	//	min : 60,
-	//	max : 220,
-	//	majorTicks : 9,
-	//	minorTicks : 9, // small ticks inside each major tick
-	//	greenFrom : 60,
-	//	greenTo : 95,
-	//	yellowFrom : 95,
-	//	yellowTo : 150,
-	//	redFrom : 150,
-	//	redTo : 200
-	//};
+	var options_gauge1 = {
+		majorTickLabel : true,
+		value : 60,
+		label : 'Temp',
+		unitsLabel : '' + String.fromCharCode(186),
+		min : 60,
+		max : 220,
+		majorTicks : 9,
+		minorTicks : 9, // small ticks inside each major tick
+		greenFrom : 60,
+		greenTo : 95,
+		yellowFrom : 95,
+		yellowTo : 150,
+		redFrom : 150,
+		redTo : 200
+	};
 
-	//gaugeDisplay = new Gauge(document.getElementById('tempGauge'), options_gauge);
+	gaugeDisplay1 = new Gauge(document.getElementById('tempGauge1'), options_gauge1);
 
 	// line plot Settings
 	i = 0;
