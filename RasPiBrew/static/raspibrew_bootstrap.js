@@ -333,6 +333,8 @@ function waitForMsg() {
 				jQuery('#i_paramResponse2').html(data.i_param);
 				jQuery('#d_paramResponse2').html(data.d_param);
 
+				gaugeDisplay2.setValue(parseFloat(data.temp));
+
 				storeData(1, data);
 
 				if (capture_on == 1) {
@@ -374,6 +376,8 @@ function waitForMsg() {
 				jQuery('#k_paramResponse3').html(data.k_param);
 				jQuery('#i_paramResponse3').html(data.i_param);
 				jQuery('#d_paramResponse3').html(data.d_param);
+
+				gaugeDisplay3.setValue(parseFloat(data.temp));
 
 				storeData(2, data);
 
