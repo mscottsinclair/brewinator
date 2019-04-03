@@ -7,7 +7,7 @@
 	
 	<!-- Place templates (themes) in templates folder -->
 	<!-- The static folder must contain the corresponding css and js files -->
-	<Template>brewinator.html</Template>
+	<Template>raspibrew_bootstrap.html</Template>
 	
 	<!-- Use LCD - yes or no-->
 	<Use_LCD>no</Use_LCD>
@@ -21,14 +21,14 @@
 	<!-- Repeat same element names (Temp_Sensor_Id and optional Heat_Pin) for additional temp sensors -->
 	<!-- Currently limited to 3 temp sensors but that can easily be expanded in raspibrew.py -->
 	
-	<!-- Boil Kettle Probe -->
-	<Temp_Sensor_Id>28-000008e137df</Temp_Sensor_Id>
+	<!-- Boil Kettle Probe (red) -->
+	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
 
-	<!-- Mash Tun Probe -->
+	<!-- Mash Tun Probe (blue) -->
 	<Temp_Sensor_Id>28-000008e13321</Temp_Sensor_Id>
 	
-	<!-- Hot Liquor Tank Probe -->
-	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
+	<!-- Hot Liquor Tank Probe (black)-->
+	<Temp_Sensor_Id>28-000008e137df</Temp_Sensor_Id>
 	<Heat_Pin>16</Heat_Pin>
 	
 	<!-- If your relay board work inverted mode set to 1 -->
