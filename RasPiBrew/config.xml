@@ -21,16 +21,16 @@
 	<!-- Repeat same element names (Temp_Sensor_Id and optional Heat_Pin) for additional temp sensors -->
 	<!-- Currently limited to 3 temp sensors but that can easily be expanded in raspibrew.py -->
 	
-	<!-- Boil Kettle Probe (red) -->
-	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
-
-	<!-- Mash Tun Probe (blue) -->
-	<Temp_Sensor_Id>28-000008e13321</Temp_Sensor_Id>
-	
 	<!-- Hot Liquor Tank Probe (black)-->
 	<Temp_Sensor_Id>28-000008e137df</Temp_Sensor_Id>
 	<Heat_Pin>16</Heat_Pin>
-	
+
+	<!-- Mash Tun Probe (blue) -->
+	<Temp_Sensor_Id>28-000008e13321</Temp_Sensor_Id>
+
+	<!-- Boil Kettle Probe (red) -->
+	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
+
 	<!-- If your relay board work inverted mode set to 1 -->
 	<GPIO_Inverted>0</GPIO_Inverted>
 	
