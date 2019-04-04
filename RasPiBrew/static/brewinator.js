@@ -334,7 +334,7 @@ function waitForMsg() {
 				jQuery('#d_paramResponse2').html(data.d_param);
 
 				gaugeDisplay2.setValue(parseFloat(data.temp));
-				
+
 				storeData(1, data);
 
 				if (capture_on == 1) {
@@ -378,7 +378,7 @@ function waitForMsg() {
 				jQuery('#d_paramResponse3').html(data.d_param);
 
 				gaugeDisplay3.setValue(parseFloat(data.temp));
-				
+
 				storeData(2, data);
 
 				if (capture_on == 1) {
@@ -539,16 +539,15 @@ jQuery(document).ready(function() {
 		max : 220,
 		majorTicks : 9,
 		minorTicks : 9, // small ticks inside each major tick
-		greenFrom : 60,
-		greenTo : 95,
-		yellowFrom : 95,
-		yellowTo : 150,
-		redFrom : 150,
-		redTo : 200
+		greenFrom : 205,
+		greenTo : 220,
+		yellowFrom : 160,
+		yellowTo : 205,
+		redFrom : 60,
+		redTo : 160
 	};
 
 	gaugeDisplay3 = new Gauge(document.getElementById('tempGauge3'), options_gauge3);
-
 
 	// line plot Settings
 	i = 0;
