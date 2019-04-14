@@ -31,12 +31,12 @@
 # Carry out specific functions when asked to by the system
 case "$1" in
     start)
-        echo "Starting RasPiBrew"
+        echo "Starting Brewinator"
         # run application you want to start
         python /var/www/brewinator/RasPiBrew/raspibrew.py
     ;;
     stop)
-        echo "Stopping RasPiBrew"
+        echo "Stopping Brewinator"
         # kill application you want to stop
         killall python
         python /var/www/brewinator/RasPiBrew/cleanupGPIO.py
