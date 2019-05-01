@@ -24,12 +24,17 @@
 	<!-- Hot Liquor Tank Probe (black)-->
 	<Temp_Sensor_Id>28-000008e137df</Temp_Sensor_Id>
 	<Heat_Pin>16</Heat_Pin>
+	<Temp_Offset>10</Temp_Offset>
 
 	<!-- Mash Tun Probe (blue) -->
 	<Temp_Sensor_Id>28-000008e13321</Temp_Sensor_Id>
+	<Heat_Pin>0</Heat_Pin>
+	<Temp_Offset>0</Temp_Offset>
 
 	<!-- Boil Kettle Probe (red) -->
 	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
+	<Heat_Pin>0</Heat_Pin>
+	<Temp_Offset>-10</Temp_Offset>
 
 	<!-- If your relay board work inverted mode set to 1 -->
 	<GPIO_Inverted>0</GPIO_Inverted>

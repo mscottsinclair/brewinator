@@ -282,7 +282,7 @@ def packParamGet(numTempSensors, myTempSensorNum, temp, tempUnits, elapsed, mode
     return param.status
         
 # Main Temperature Control Process
-def tempControlProc(myTempSensor, display, pinNum, readOnly, paramStatus, statusQ, conn):
+def tempControlProc(myTempSensor, display, pinNum, readOnly, paramStatus, statusQ, conn, tempOffset):
     
         mode, cycle_time, duty_cycle, boil_duty_cycle, set_point, boil_manage_temp, num_pnts_smooth, \
         k_param, i_param, d_param = unPackParamInitAndPost(paramStatus)
@@ -330,9 +330,9 @@ def tempControlProc(myTempSensor, display, pinNum, readOnly, paramStatus, status
                     continue
 
                 if (tempUnits == 'F'):
-                    temp = (9.0/5.0)*temp_C + 32
+                    temp = (9.0/5.0)*temp_C + 32 + tempOffset
                 else:
-                    temp = temp_C
+                    temp = temp_C + tempOffset
 
                 temp_str = "%3.2f" % temp
                 display.showTemperature(temp_str)
@@ -490,6 +490,10 @@ if __name__ == '__main__':
     pinHeatList=[]
     for pin in xml_root.iter('Heat_Pin'):
         pinHeatList.append(int(pin.text.strip()))
+
+    tempOffsetList=[]
+    for tempOffset in xml_root.iter('Temp_Offset'):
+        tempOffsetList.append(int(tempOffset.text.strip()))
         
     pinGPIOList=[]
     for pin in xml_root.iter('GPIO_Pin'):
@@ -503,9 +507,11 @@ if __name__ == '__main__':
           
         if len(pinHeatList) >= myTempSensor.sensorNum + 1:
             pinNum = pinHeatList[myTempSensor.sensorNum]
+            tempOffset = tempOffsetList[myTempSensor.sensorNum]
             readOnly = False
         else:
             pinNum = 0
+            tempOffset = 0
             readOnly = True
         
         if myTempSensor.sensorNum >= 1:
