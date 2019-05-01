@@ -521,21 +521,21 @@ if __name__ == '__main__':
             statusQ = Queue(2) #blocking queue        
             parent_conn, child_conn = Pipe()
             p = Process(name = "tempControlProc", target=tempControlProc, args=(myTempSensor, display, pinNum, readOnly, \
-                                                              param.status, statusQ, child_conn))
+                                                              param.status, statusQ, child_conn, tempOffset))
             p.start()
             
         if myTempSensor.sensorNum == 1:
             statusQ_B = Queue(2) #blocking queue    
             parent_connB, child_conn = Pipe()  
             p = Process(name = "tempControlProc", target=tempControlProc, args=(myTempSensor, display, pinNum, readOnly, \
-                                                              param.status, statusQ_B, child_conn))
+                                                              param.status, statusQ_B, child_conn, tempOffset))
             p.start()
             
         if myTempSensor.sensorNum == 2:
             statusQ_C = Queue(2) #blocking queue 
             parent_connC, child_conn = Pipe()     
             p = Process(name = "tempControlProc", target=tempControlProc, args=(myTempSensor, display, pinNum, readOnly, \
-                                                              param.status, statusQ_C, child_conn))
+                                                              param.status, statusQ_C, child_conn, tempOffset))
             p.start()
 
     app.debug = True 
