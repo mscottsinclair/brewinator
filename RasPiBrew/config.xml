@@ -34,7 +34,7 @@
 	<!-- Boil Kettle Probe (red) -->
 	<Temp_Sensor_Id>28-000008e10b35</Temp_Sensor_Id>
 	<Heat_Pin>0</Heat_Pin>
-	<Temp_Offset></Temp_Offset>
+	<Temp_Offset>0</Temp_Offset>
 
 	<!-- If your relay board work inverted mode set to 1 -->
 	<GPIO_Inverted>0</GPIO_Inverted>
